@@ -1,68 +1,18 @@
+@import url(styles/banner.css);
+@import url(styles/header.css);
+
 :root {
-    --cor-de-fundo: #3bbee6;
-    --branco: #0ab2e6;
-    --laranja: #f7fcf7; 
-    --azul-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+	--cor-de-fundo: #3bbee6;
+	--branco: #0ab2e6;
+	--laranja: #f7fcf7;
+	--azul-degrade: linear-gradient(97.54deg, #002f52 35.49%, #326589 165.37%);
+	--fonte-principal: "Poppins";
 }
 
 body {
-     background-color: var(--cor-de-fundo); 
+	background-color: var(--cor-de-fundo);
+	font-family: var(--fonte-principal), sans-serif;
+	font-size: 16px;
+	font-weight: 400;
 }
 
-h1 { 
-    background-color: rgb(219, 208, 208);
-}
-
-.cabeçalho {
-    background-color: var(--branco);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    }
-
-.container {
-    display: flex;
-    align-items: center;
-}
-.container__imagem{
-    padding: 1em;
-}
-
-.cabeçalho__menu-hamburguer {
-    width:  24px;
-    height: 24px;
-    background-image: url("./img/Menu.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    display: inline-block;
-    }
-
-.lista-menu{
-    display: none;
-    position: absolute;
-    top: 100%;
-}
-
-.lista-menu__titulo {
-    color: var(--laranja);
-}
-
-.lista-menu__link {
-    background: var(--azul-degrade);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-transform: uppercase;
-    }
-
-    .lista-menu__titulo,
-    .lista-menu__item {
-        padding: 1em;
-        background-color: var(--branco);
-    }
-
- 
-.container__botao:checked ~ .lista-menu {
-    display: block;
-    }
